@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+  font-size: 1.6rem;
+  background-color: red;
+  color: white;
+  padding: 0.8rem;
+}
+.nav-logo {
+  display: inline-block;
+  height: 100%;
+}
+.nav-logo img {
+  height: 100%;
+}
+.nav-right li {
+  display: inline-block;
+  list-style: none;
+  padding: 8px;
+  cursor: pointer;
+}
+.nav-right li:hover {
+  border-radius: 6px;
+  background-color: #9b1010;
+}
+.aside-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 25rem);
+  place-content: center;
+  padding: 1.8rem;
+  width: 100%;
+  gap: 1rem;
+}
+.categories {
+  width: 25rem;
+  height: 10rem;
+  background-color: red;
+  border-radius: 12px;
+  box-shadow: 0 0 1rem #404040;
+}
+
+.section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.8rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+.scroll-images {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+.products {
+  width: 25rem;
+  height: 40rem;
+  border-radius: 12px;
+  box-shadow: 0 0 1rem #404040;
+  background-color: red;
+}
+
+.footer-container {
+  width: 100%;
+  min-height: 5rem;
+  background-color: red;
+}
+
+@media (min-width: 690px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+  .main-container {
+    display: flex;
+    place-content: center;
+    height: 100%;
+  }
+  .aside-container {
+    border-right: 0.3rem solid red;
+    width: 30rem;
+    gap: 3rem;
+  }
+  .section-container {
+    margin: 0;
+    /* width: 100%; */
+  }
+  .products-container {
+    width: calc(100vw - 40rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .scroll-images {
+    width: 100%;
+    height: calc(50vh - 4rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    /* align-items: start; */
+    padding: 1rem;
+    gap: 2rem;
+    overflow: auto;
+    scroll-behavior: smooth;
+  }
+}
